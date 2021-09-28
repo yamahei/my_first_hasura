@@ -1,11 +1,12 @@
-Hasura
-======
+My First Hasura
+===============
 
 リンク
 ------
 
-* [公式](https://hasura.io/)
-* Qiita記事
+* [Hasura公式](https://hasura.io/)
+* [日本語チュートリアル](https://hasura.io/learn/ja/graphql/hasura/introduction/)
+* 参考記事
   * [Hasuraがめちゃくちゃ便利だよという話](https://qiita.com/maaz118/items/9e198ea91ad8fc624491)
   * [Hasura（GraphQL Engine）をかじってみる](https://qiita.com/piggydev/items/cc29dfe52570d4e6ba63)
   * [Hasuraで既存のPostgreSQLから爆速でGraphQL APIサーバーを構築する](https://qiita.com/ryo2132/items/999f7e6c8958a52d52d6)
@@ -35,10 +36,14 @@ PostgreSQLのDBからGraphQLのAPIサーバを作ってくれちゃうツール�
 できること詳細
 --------------
 
-### Webサーバ連携
+### GraphQL APIの自動生成
+
+DB定義から、自動的にGraphQL APIを生成してくれるらしい。
+
+### Webサーバ連携？
 
 * ログイン認証/セッションはWebサーバと共用したいはず
-  * ⇒調査未完
+  * ⇒認証は外部依存（調査未完）
 * （UL/DLなど）GraphQLAPI以外の通信はWebサーバにやらせたいのでは？
   * ⇒無理にAPI分けるよりBase64で同格に扱った方が無難かも
   * ⇒サイズ調整とかサムネイル作成が必要だと別APIが必要
@@ -52,7 +57,8 @@ PostgreSQLのDBからGraphQLのAPIサーバを作ってくれちゃうツール�
 元になるPostgreSQLとDBが必要なので、以下のサンプルデータを作りました。
 メンバーをプロジェクトにアサインするデータ構造をイメージしています。
 
-簡単なER図は [PlantUML](http://www.plantuml.com/plantuml/png/SoWkIImgAStDuL80WjIyaioIIWKbtzJSfDIYOYK5ns05NnIPWAByhDJa4eXK08gKOt5nPdeUHCQH2opbgw2dLmtaWDW1KBP3QbuAq3u0) で参照できます。
+* [PlantUMLのER図](http://www.plantuml.com/plantuml/png/SoWkIImgAStDuL80WjIyaioIIWKbtzJSfDIYOYK5ns05NnIPWAByhDJa4eXK08gKOt5nPdeUHCQH2opbgw2dLmtaWDW1KBP3QbuAq3u0)
+
 ```
 @startuml
     entity "Members" AS M
