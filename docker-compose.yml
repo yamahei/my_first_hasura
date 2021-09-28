@@ -1,0 +1,24 @@
+version: "3.9"
+services:
+  db:
+    image: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./volume/db/data:/var/lib/postgresql/data
+      - ./volume/db/logs:/var/log
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: trust
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: 'tasks'
+      PGDATA: /var/lib/postgresql/data/pgdata
+  hasura:
+    image: hasura/graphql-engine
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    environment:
+      HASURA_GRAPHQL_DATABASE_URL: "postgres://postgres:postgres@db:5432/tasks"
+      HASURA_GRAPHQL_ENABLE_CONSOLE: "true"
