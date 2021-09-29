@@ -10,7 +10,7 @@ My First Hasura
   * [Hasuraがめちゃくちゃ便利だよという話](https://qiita.com/maaz118/items/9e198ea91ad8fc624491)
   * [Hasura（GraphQL Engine）をかじってみる](https://qiita.com/piggydev/items/cc29dfe52570d4e6ba63)
   * [Hasuraで既存のPostgreSQLから爆速でGraphQL APIサーバーを構築する](https://qiita.com/ryo2132/items/999f7e6c8958a52d52d6)
-
+  * [もうAPIを自分で開発するのは古い？Hasuraの強烈な有効性について紹介する](https://qiita.com/yuno_miyako/items/4a4f68a473231f8c07cd)
 
 Hasuraって何か
 --------------
